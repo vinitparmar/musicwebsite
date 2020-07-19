@@ -1,0 +1,12 @@
+
+ {% extends 'music/base.html' %} 
+ {% block body%}
+    <ul>
+    <h1>My Index Page</h1>
+        {% for album in all_album %}
+        <li>
+            <a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+ {% endblock  %}
